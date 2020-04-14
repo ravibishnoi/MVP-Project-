@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zKl-9a-CuZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Traffic Lights-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TrafficLightVC" customModule="MvpProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-77-QxB">
+                                <rect key="frame" x="147.5" y="124" width="80" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="M9e-tG-wKb"/>
+                                    <constraint firstAttribute="width" constant="80" id="dKu-Xv-91h"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="redLightAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bc-tw-zfF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPh-OX-wcl">
+                                <rect key="frame" x="147.5" y="234" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="CdH-Oq-Lon"/>
+                                    <constraint firstAttribute="height" constant="80" id="gut-xy-LMr"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="yellowLightAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUm-o2-7gT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-Dd-S84">
+                                <rect key="frame" x="147.5" y="344" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="C9C-nw-cIK"/>
+                                    <constraint firstAttribute="height" constant="80" id="Osd-tH-btd"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="greenLightAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKH-U7-ofY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWE-iM-JKy">
+                                <rect key="frame" x="20" y="474" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="q6H-aY-2nG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ed3-Dd-S84" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5tK-VS-gBH"/>
+                            <constraint firstItem="nBg-77-QxB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OD1-DR-ewP"/>
+                            <constraint firstItem="OWE-iM-JKy" firstAttribute="top" secondItem="Ed3-Dd-S84" secondAttribute="bottom" constant="50" id="Ti2-W3-mlb"/>
+                            <constraint firstItem="OWE-iM-JKy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UUM-Hy-OIu"/>
+                            <constraint firstItem="nBg-77-QxB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="YqG-Pz-6Ee"/>
+                            <constraint firstItem="DPh-OX-wcl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cGe-ij-QjR"/>
+                            <constraint firstItem="DPh-OX-wcl" firstAttribute="top" secondItem="nBg-77-QxB" secondAttribute="bottom" constant="30" id="fyZ-t1-TIR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OWE-iM-JKy" secondAttribute="trailing" constant="20" id="icp-uy-jVa"/>
+                            <constraint firstItem="Ed3-Dd-S84" firstAttribute="top" secondItem="DPh-OX-wcl" secondAttribute="bottom" constant="30" id="wr7-7r-hFH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Traffic Lights" id="4sK-HM-GbV"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="OWE-iM-JKy" id="gEC-Xg-SHq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="684"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pPK-6t-wRZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zKl-9a-CuZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s2A-9s-1bQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mmM-eO-SCC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Nh-hR-wSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="684.10794602698661"/>
+        </scene>
+    </scenes>
+</document>
